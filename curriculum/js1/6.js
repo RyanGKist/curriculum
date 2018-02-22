@@ -5,8 +5,17 @@
  * @returns {number}
  */
 
-const solution = (a) => {
-  return 0;
+const solution = (a, sum = 0, originalNumber=a) => {
+  if(a != 0){
+    if(a != 1 && a != originalNumber){
+      if(originalNumber % a == 0){
+        sum += a;
+        solution(a-1,sum,originalNumber);
+      }
+    }
+    return solution(a-1,sum,originalNumber)
+  }
+  return sum;
 };
 
 module.exports = {
