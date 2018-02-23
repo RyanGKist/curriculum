@@ -6,8 +6,8 @@
  */
 
 const solution = (a) => {
-  return 0;
-};
+return 0;
+}
 
 module.exports = {
   solution,

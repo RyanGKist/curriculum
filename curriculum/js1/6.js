@@ -6,8 +6,8 @@
  */
 
 const solution = (a, sum = 0, originalNumber=a) => {
-  if(a != 0){
-    if(a != 1 && a != originalNumber){
+  if(a > 1){
+    if(a != originalNumber){
       if(originalNumber % a == 0){
         sum += a;
         solution(a-1,sum,originalNumber);
